@@ -2,9 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use backend\models\CompaniesSearch;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\CompaniesSearch */
+/* @var $model backend\models\CompaniesSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 

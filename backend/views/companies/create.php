@@ -1,10 +1,11 @@
 <?php
 
 use yii\helpers\Html;
+use backend\models\Companies;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Companies */
+/* @var $model backend\models\Companies */
 
 $this->title = 'Create Companies';
 $this->params['breadcrumbs'][] = ['label' => 'Companies', 'url' => ['index']];
