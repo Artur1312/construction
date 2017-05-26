@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?//= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'employees') ?>
 
@@ -25,15 +25,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'work_date') ?>
 
-    <?php // echo $form->field($model, 'start_time') ?>
+    <?= $form->field($model, 'start_time') ?>
 
-    <?php // echo $form->field($model, 'end_time') ?>
+    <?= $form->field($model, 'end_time') ?>
 
-    <?php // echo $form->field($model, 'work_hours') ?>
+    <?= $form->field($model, 'work_hours') ?>
 
-    <?php // echo $form->field($model, 'lunch') ?>
+    <?= $form->field($model, 'lunch') ?>
 
-    <?php // echo $form->field($model, 'comment') ?>
+    <?= $form->field($model, 'comment') ?>
 
     <?php // echo $form->field($model, 'images') ?>
 

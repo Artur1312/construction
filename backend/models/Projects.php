@@ -21,7 +21,7 @@ class Projects extends \yii\db\ActiveRecord
 
 
     public $image;
-    public $gallery;
+    public $photos;
     /**
      * @inheritdoc
      */
@@ -55,7 +55,7 @@ class Projects extends \yii\db\ActiveRecord
             [['company_id'], 'exist', 'skipOnError' => true, 'targetClass' => Companies::className(), 'targetAttribute' => ['company_id' => 'id']],
             [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => Status::className(), 'targetAttribute' => ['status_id' => 'id']],
             [['image'], 'file', 'extensions' => 'png, jpg'],
-            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
+            [['photos'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
     public function upload(){
@@ -70,9 +70,9 @@ class Projects extends \yii\db\ActiveRecord
         }
     }
 
-    public function uploadGallery(){ // сохраняет целиком галерею
+    public function uploadPhotos(){ // сохраняет целиком галерею
         if($this->validate()){
-            foreach($this->gallery as $file){
+            foreach($this->photos as $file){
                 $path = 'upload/store/' . $file->baseName . '.' . $file->extension;
                 $file->saveAs($path);
                 $this->attachImage($path);
@@ -94,7 +94,7 @@ class Projects extends \yii\db\ActiveRecord
             'project_name' => 'Project Name',
             'company_id' => 'Company Name',
             'description' => 'Description',
-            'status_id' => 'Status ID',
+            'status_id' => 'Status',
         ];
     }
 
